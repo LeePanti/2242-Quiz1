@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"math"
 )
 
@@ -14,4 +15,12 @@ func (c circle) area() float64 {
 
 func (c circle) perimeter() float64 {
 	return 2 * math.Pi * c.radius
+}
+
+func main() {
+	myCircle := circle{
+		radius: 1,
+	}
+	fmt.Println(myCircle.area())
+	fmt.Println(myCircle.perimeter())
 }
